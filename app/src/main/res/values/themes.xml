@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodLinkSA" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Main branding colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+
+        <!-- Shape styling -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.FoodLink.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.FoodLink.Medium</item>
+    </style>
+
+    <style name="Theme.FoodLinkSA" parent="Base.Theme.FoodLinkSA" />
+
+    <!-- Custom Shapes -->
+    <style name="ShapeAppearance.FoodLink.Small" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="ShapeAppearance.FoodLink.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+</resources>

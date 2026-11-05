@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodLink SA</string>
+    <string name="login">Teken aan</string>
+    <string name="register">Registreer</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wagwoord</string>
+    <string name="confirm_password">Bevestig Wagwoord</string>
+    <string name="settings">Instellings</string>
+    <string name="save">Stoor</string>
+    <string name="favorites">Gunstelinge</string>
+</resources>

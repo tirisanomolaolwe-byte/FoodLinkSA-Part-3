@@ -1,0 +1,35 @@
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.artifacts/
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Kotlin
+.kotlin/
+
+# Local configuration
+local.properties
+
+# Android build output
+captures/
+.externalNativeBuild/
+.cxx/
+
+# macOS
+.DS_Store
+
+# Firebase configuration (review before committing)
+google-services.json
+
+# Secrets and environment variables
+.env
+.env.*
+*.keystore
+*.jks
+
+# Logs
+*.log
