@@ -1,0 +1,6 @@
+# Add these lines to the existing project-root .gitignore to keep release outputs and signing credentials out of Git.
+*.jks
+*.keystore
+key.properties
+*.apk
+*.aab
