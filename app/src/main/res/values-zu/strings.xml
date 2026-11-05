@@ -22,4 +22,18 @@
     <string name="submit_donation">Thumela Umnikelo</string>
     <string name="no_donations_available">Awekho iminikelo etholakalayo okwamanje.</string>
     <string name="retry">Phinda uzame</string>
+    <string name="my_donations">Iminikelo Yami</string>
+    <string name="edit_donation">Hlela Umnikelo</string>
+    <string name="cancel_donation">Khansela Umnikelo</string>
+    <string name="cancel_donation_confirm_title">Khansela Umnikelo?</string>
+    <string name="cancel_donation_confirm_message">Usho ngempela ukuthi ufuna ukukhansela lo mnikelo? Lesi senzo ngeke sihleliswe.</string>
+    <string name="donation_cancelled_success">Umnikelo ukhanselwe ngempumelelo.</string>
+    <string name="donation_updated_success">Umnikelo ubuyekezwe ngempumelelo.</string>
+    <string name="no_my_donations">Awukadali neminikelo okwamanje.</string>
+    <string name="confirm">Qinisekisa</string>
+    <string name="cancel">Khansela</string>
+    <string name="edit">Hlela</string>
+    <string name="update_donation">Buyekeza Umnikelo</string>
+    <string name="cannot_edit_status">Lo mnikelo awusakwazi ukuhlelwa.</string>
+    <string name="cannot_cancel_status">Lo mnikelo awusakwazi ukukhanselwa.</string>
 </resources>

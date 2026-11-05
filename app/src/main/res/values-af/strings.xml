@@ -22,4 +22,18 @@
     <string name="submit_donation">Dien Skenking In</string>
     <string name="no_donations_available">Geen skenkings tans beskikbaar nie.</string>
     <string name="retry">Probeer weer</string>
+    <string name="my_donations">My Skenkings</string>
+    <string name="edit_donation">Wysig Skenking</string>
+    <string name="cancel_donation">Kanselleer Skenking</string>
+    <string name="cancel_donation_confirm_title">Kanselleer Skenking?</string>
+    <string name="cancel_donation_confirm_message">Is jy seker jy wil hierdie skenking kanselleer? Hierdie aksie kan nie ongedoen gemaak word nie.</string>
+    <string name="donation_cancelled_success">Skenking suksesvol gekanselleer.</string>
+    <string name="donation_updated_success">Skenking suksesvol opgedateer.</string>
+    <string name="no_my_donations">Jy het nog geen skenkings geskep nie.</string>
+    <string name="confirm">Bevestig</string>
+    <string name="cancel">Kanselleer</string>
+    <string name="edit">Wysig</string>
+    <string name="update_donation">Opdateer Skenking</string>
+    <string name="cannot_edit_status">Hierdie skenking kan nie meer gewysig word nie.</string>
+    <string name="cannot_cancel_status">Hierdie skenking kan nie meer gekanselleer word nie.</string>
 </resources>

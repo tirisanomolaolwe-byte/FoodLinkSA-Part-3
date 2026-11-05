@@ -8,6 +8,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="settings">Settings</string>
     <string name="save">Save</string>
+    <string name="my_claims">My Claims</string>
     <string name="favorites">Favorites</string>
     <string name="browse_donations">Browse Donations</string>
     <string name="create_donation">Create Donation</string>
@@ -22,5 +23,19 @@
     <string name="submit_donation">Submit Donation</string>
     <string name="no_donations_available">No donations available at the moment.</string>
     <string name="retry">Retry</string>
+    <string name="my_donations">My Donations</string>
+    <string name="edit_donation">Edit Donation</string>
+    <string name="cancel_donation">Cancel Donation</string>
+    <string name="cancel_donation_confirm_title">Cancel Donation?</string>
+    <string name="cancel_donation_confirm_message">Are you sure you want to cancel this donation? This action cannot be undone.</string>
+    <string name="donation_cancelled_success">Donation cancelled successfully.</string>
+    <string name="donation_updated_success">Donation updated successfully.</string>
+    <string name="no_my_donations">You have not created any donations yet.</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit">Edit</string>
+    <string name="update_donation">Update Donation</string>
+    <string name="cannot_edit_status">This donation can no longer be edited.</string>
+    <string name="cannot_cancel_status">This donation can no longer be cancelled.</string>
     <string name="default_web_client_id" translatable="false">406680426398-placeholder.apps.googleusercontent.com</string>
 </resources>

@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="volunteer">Volunteer</string>
+    <string name="volunteer_application_title">Volunteer with FoodLink SA</string>
+    <string name="volunteer_application_intro">Register your interest in helping collect, organise and distribute surplus food to communities in need.</string>
+    <string name="volunteer_full_name">Full name</string>
+    <string name="volunteer_contact_number">Contact number</string>
+    <string name="volunteer_skills">Skills and experience</string>
+    <string name="volunteer_availability">Availability</string>
+    <string name="volunteer_additional_information">Additional information (optional)</string>
+    <string name="volunteer_submit_application">Submit application</string>
+    <string name="volunteer_update_application">Update application</string>
+    <string name="volunteer_status_format">Application status: %1$s</string>
+    <string name="volunteer_full_name_required">Full name is required.</string>
+    <string name="volunteer_contact_required">Contact number is required.</string>
+    <string name="volunteer_skills_required">Please enter your skills.</string>
+    <string name="volunteer_availability_required">Please enter your availability.</string>
+    <string name="volunteer_sign_in_required">Please log in to register as a volunteer.</string>
+    <string name="volunteer_load_failed">Unable to load your volunteer application.</string>
+    <string name="volunteer_save_failed">Unable to save your volunteer application.</string>
+    <string name="volunteer_application_saved">Your volunteer application was submitted successfully.</string>
+    <string name="volunteer_application_updated">Your volunteer application was updated successfully.</string>
 </resources>

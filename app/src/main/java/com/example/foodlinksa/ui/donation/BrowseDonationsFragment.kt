@@ -44,7 +44,15 @@ class BrowseDonationsFragment : Fragment() {
 
     private fun setupListeners() {
         binding.fabCreateDonation.setOnClickListener {
-            findNavController().navigate(R.id.action_browseDonationsFragment_to_createDonationFragment)
+            findNavController().navigate(
+                R.id.action_browseDonationsFragment_to_createDonationFragment
+            )
+        }
+
+        binding.btnMyClaims.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_browseDonationsFragment_to_myClaimsFragment
+            )
         }
 
         binding.btnRetry.setOnClickListener {
@@ -89,13 +97,17 @@ class BrowseDonationsFragment : Fragment() {
         binding.layoutError.visibility = View.GONE
         binding.rvDonations.visibility = View.VISIBLE
 
-        binding.rvDonations.adapter = DonationAdapter(donations) { selectedDonation ->
-            val bundle = bundleOf("donationId" to selectedDonation.id)
-            findNavController().navigate(
-                R.id.action_browseDonationsFragment_to_donationDetailsFragment,
-                bundle
-            )
-        }
+        binding.rvDonations.adapter = DonationAdapter(
+            donations = donations,
+            onItemClick = { selectedDonation ->
+                val bundle = bundleOf("donationId" to selectedDonation.id)
+
+                findNavController().navigate(
+                    R.id.action_browseDonationsFragment_to_donationDetailsFragment,
+                    bundle
+                )
+            }
+        )
     }
 
     private fun showErrorState(message: String) {

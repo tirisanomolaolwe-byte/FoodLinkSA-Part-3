@@ -10,9 +10,11 @@
         android:name="com.example.foodlinksa.ui.auth.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
+
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+
         <action
             android:id="@+id/action_loginFragment_to_foodListFragment"
             app:destination="@id/foodListFragment"
@@ -25,31 +27,51 @@
         android:name="com.example.foodlinksa.ui.auth.RegisterFragment"
         android:label="Register"
         tools:layout="@layout/fragment_register">
+
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 
     <fragment
+        android:id="@+id/volunteerFragment"
+        android:name="com.example.foodlinksa.ui.volunteer.VolunteerFragment"
+        android:label="@string/volunteer"
+        tools:layout="@layout/fragment_volunteer" />
+
+    <fragment
         android:id="@+id/foodListFragment"
         android:name="com.example.foodlinksa.ui.food.FoodListFragment"
         android:label="Food List"
         tools:layout="@layout/fragment_food_list">
+
         <action
             android:id="@+id/action_foodListFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+
         <action
             android:id="@+id/action_foodListFragment_to_mealDetailsFragment"
             app:destination="@id/mealDetailsFragment" />
+
         <action
             android:id="@+id/action_foodListFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
+
         <action
             android:id="@+id/action_foodListFragment_to_browseDonationsFragment"
             app:destination="@id/browseDonationsFragment" />
+
         <action
             android:id="@+id/action_foodListFragment_to_createDonationFragment"
             app:destination="@id/createDonationFragment" />
+
+        <action
+            android:id="@+id/action_foodListFragment_to_myDonationsFragment"
+            app:destination="@id/myDonationsFragment" />
+
+        <action
+            android:id="@+id/action_foodListFragment_to_myClaimsFragment"
+            app:destination="@id/myClaimsFragment" />
     </fragment>
 
     <fragment
@@ -57,6 +79,7 @@
         android:name="com.example.foodlinksa.ui.food.FavoritesFragment"
         android:label="Favorites"
         tools:layout="@layout/fragment_favorites">
+
         <action
             android:id="@+id/action_favoritesFragment_to_mealDetailsFragment"
             app:destination="@id/mealDetailsFragment" />
@@ -67,9 +90,11 @@
         android:name="com.example.foodlinksa.ui.food.MealDetailsFragment"
         android:label="Meal Details"
         tools:layout="@layout/fragment_meal_details">
+
         <argument
             android:name="mealId"
             app:argType="string" />
+
         <argument
             android:name="mealName"
             app:argType="string" />
@@ -86,12 +111,22 @@
         android:name="com.example.foodlinksa.ui.donation.BrowseDonationsFragment"
         android:label="Browse Donations"
         tools:layout="@layout/fragment_browse_donations">
+
         <action
             android:id="@+id/action_browseDonationsFragment_to_createDonationFragment"
             app:destination="@id/createDonationFragment" />
+
         <action
             android:id="@+id/action_browseDonationsFragment_to_donationDetailsFragment"
             app:destination="@id/donationDetailsFragment" />
+
+        <action
+            android:id="@+id/action_browseDonationsFragment_to_myDonationsFragment"
+            app:destination="@id/myDonationsFragment" />
+
+        <action
+            android:id="@+id/action_browseDonationsFragment_to_myClaimsFragment"
+            app:destination="@id/myClaimsFragment" />
     </fragment>
 
     <fragment
@@ -105,6 +140,47 @@
         android:name="com.example.foodlinksa.ui.donation.DonationDetailsFragment"
         android:label="Donation Details"
         tools:layout="@layout/fragment_donation_details">
+
+        <argument
+            android:name="donationId"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_donationDetailsFragment_to_editDonationFragment"
+            app:destination="@id/editDonationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myDonationsFragment"
+        android:name="com.example.foodlinksa.ui.donation.MyDonationsFragment"
+        android:label="My Donations"
+        tools:layout="@layout/fragment_my_donations">
+
+        <action
+            android:id="@+id/action_myDonationsFragment_to_createDonationFragment"
+            app:destination="@id/createDonationFragment" />
+
+        <action
+            android:id="@+id/action_myDonationsFragment_to_editDonationFragment"
+            app:destination="@id/editDonationFragment" />
+
+        <action
+            android:id="@+id/action_myDonationsFragment_to_donationDetailsFragment"
+            app:destination="@id/donationDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myClaimsFragment"
+        android:name="com.example.foodlinksa.ui.donation.MyClaimsFragment"
+        android:label="My Claims"
+        tools:layout="@layout/fragment_my_claims" />
+
+    <fragment
+        android:id="@+id/editDonationFragment"
+        android:name="com.example.foodlinksa.ui.donation.EditDonationFragment"
+        android:label="Edit Donation"
+        tools:layout="@layout/fragment_edit_donation">
+
         <argument
             android:name="donationId"
             app:argType="string" />
