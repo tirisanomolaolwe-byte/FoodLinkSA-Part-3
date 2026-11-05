@@ -9,4 +9,17 @@
     <string name="settings">Instellings</string>
     <string name="save">Stoor</string>
     <string name="favorites">Gunstelinge</string>
+    <string name="browse_donations">Blaai deur Skenkings</string>
+    <string name="create_donation">Skep Skenking</string>
+    <string name="donation_details">Skenking Besonderhede</string>
+    <string name="food_title">Kos Titel</string>
+    <string name="description">Beskrywing</string>
+    <string name="category">Kategorie</string>
+    <string name="quantity">Hoeveelheid</string>
+    <string name="unit">Eenheid</string>
+    <string name="collection_address">Afhaaladres</string>
+    <string name="collection_deadline">Afhaalsperdatum</string>
+    <string name="submit_donation">Dien Skenking In</string>
+    <string name="no_donations_available">Geen skenkings tans beskikbaar nie.</string>
+    <string name="retry">Probeer weer</string>
 </resources>

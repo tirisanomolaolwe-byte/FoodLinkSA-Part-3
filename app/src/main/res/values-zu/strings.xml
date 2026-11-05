@@ -9,4 +9,17 @@
     <string name="settings">Izilungiselelo</string>
     <string name="save">Londoloza</string>
     <string name="favorites">Izintandokazi</string>
+    <string name="browse_donations">Buka Iminikelo</string>
+    <string name="create_donation">Dala Umnikelo</string>
+    <string name="donation_details">Imininingwane Yomnikelo</string>
+    <string name="food_title">Isihloko Sokudla</string>
+    <string name="description">Incazelo</string>
+    <string name="category">Uhlobo</string>
+    <string name="quantity">Inani</string>
+    <string name="unit">Iyunithi</string>
+    <string name="collection_address">Ikheli Lokuqoqa</string>
+    <string name="collection_deadline">Isikhathi Sokuqoqa</string>
+    <string name="submit_donation">Thumela Umnikelo</string>
+    <string name="no_donations_available">Awekho iminikelo etholakalayo okwamanje.</string>
+    <string name="retry">Phinda uzame</string>
 </resources>
