@@ -44,6 +44,12 @@
         <action
             android:id="@+id/action_foodListFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_foodListFragment_to_browseDonationsFragment"
+            app:destination="@id/browseDonationsFragment" />
+        <action
+            android:id="@+id/action_foodListFragment_to_createDonationFragment"
+            app:destination="@id/createDonationFragment" />
     </fragment>
 
     <fragment
@@ -74,5 +80,34 @@
         android:name="com.example.foodlinksa.ui.settings.SettingsFragment"
         android:label="Settings"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/browseDonationsFragment"
+        android:name="com.example.foodlinksa.ui.donation.BrowseDonationsFragment"
+        android:label="Browse Donations"
+        tools:layout="@layout/fragment_browse_donations">
+        <action
+            android:id="@+id/action_browseDonationsFragment_to_createDonationFragment"
+            app:destination="@id/createDonationFragment" />
+        <action
+            android:id="@+id/action_browseDonationsFragment_to_donationDetailsFragment"
+            app:destination="@id/donationDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createDonationFragment"
+        android:name="com.example.foodlinksa.ui.donation.CreateDonationFragment"
+        android:label="Create Donation"
+        tools:layout="@layout/fragment_create_donation" />
+
+    <fragment
+        android:id="@+id/donationDetailsFragment"
+        android:name="com.example.foodlinksa.ui.donation.DonationDetailsFragment"
+        android:label="Donation Details"
+        tools:layout="@layout/fragment_donation_details">
+        <argument
+            android:name="donationId"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

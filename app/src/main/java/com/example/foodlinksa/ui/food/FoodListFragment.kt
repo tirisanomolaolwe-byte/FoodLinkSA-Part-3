@@ -131,6 +131,14 @@ class FoodListFragment : Fragment() {
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
                 return when (menuItem.itemId) {
+                    R.id.action_browse_donations -> {
+                        findNavController().navigate(R.id.action_foodListFragment_to_browseDonationsFragment)
+                        true
+                    }
+                    R.id.action_create_donation -> {
+                        findNavController().navigate(R.id.action_foodListFragment_to_createDonationFragment)
+                        true
+                    }
                     R.id.action_favorites -> {
                         findNavController().navigate(R.id.action_foodListFragment_to_favoritesFragment)
                         true

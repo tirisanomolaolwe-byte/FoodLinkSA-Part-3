@@ -2,11 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_browse_donations"
+        android:title="@string/browse_donations"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_create_donation"
+        android:title="@string/create_donation"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_favorites"
         android:title="@string/favorites"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:title="@string/settings"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="never" />
 </menu>

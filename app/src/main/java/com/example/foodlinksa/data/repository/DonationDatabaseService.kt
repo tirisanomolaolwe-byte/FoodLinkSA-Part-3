@@ -32,9 +32,16 @@ class DonationDatabaseService {
 
         val document = donations.document()
 
+        val donorName = donation.donorName.ifBlank {
+            user.displayName?.takeIf { it.isNotBlank() }
+                ?: user.email?.substringBefore("@")
+                ?: "Donor"
+        }
+
         val newDonation = donation.copy(
             id = document.id,
             donorId = user.uid,
+            donorName = donorName,
             quantity = donation.quantity,
             availableQuantity = donation.quantity,
             status = DonationStatus.AVAILABLE,
@@ -80,6 +87,17 @@ class DonationDatabaseService {
             document.toObject(Donation::class.java)
                 ?.copy(id = document.id)
         }.sortedByDescending { it.createdAt }
+    }
+
+    // RETRIEVE SINGLE DONATION BY ID
+    suspend fun getDonationById(donationId: String): Donation? {
+        if (donationId.isBlank()) return null
+        val snapshot = donations.document(donationId).get().await()
+        return if (snapshot.exists()) {
+            snapshot.toObject(Donation::class.java)?.copy(id = snapshot.id)
+        } else {
+            null
+        }
     }
 
     // UPDATE DONATION
@@ -167,37 +185,46 @@ class DonationDatabaseService {
             )
         }.await()
     }
-
-
     // CANCEL DONATION
     suspend fun cancelDonation(donationId: String) {
         val userId = auth.currentUser?.uid
             ?: throw IllegalStateException("Please log in first.")
 
+        require(donationId.isNotBlank()) {
+            "Invalid donation ID."
+        }
+
         val document = donations.document(donationId)
-        val snapshot = document.get().await()
-        val currentStatus = snapshot.getString("status")
 
-        require(
-            currentStatus == DonationStatus.AVAILABLE ||
-                    currentStatus == DonationStatus.PARTIALLY_CLAIMED
-        ) {
-            "This donation can no longer be cancelled."
-        }
+        db.runTransaction { transaction ->
+            val snapshot = transaction.get(document)
 
-        require(snapshot.exists()) {
-            "Donation does not exist."
-        }
+            require(snapshot.exists()) {
+                "Donation does not exist."
+            }
 
-        require(snapshot.getString("donorId") == userId) {
-            "You cannot cancel another user's donation."
-        }
+            require(snapshot.getString("donorId") == userId) {
+                "You cannot cancel another user's donation."
+            }
 
-        document.update(
-            mapOf(
-                "status" to DonationStatus.CANCELLED,
-                "updatedAt" to System.currentTimeMillis()
+            val currentStatus = snapshot.getString("status")
+
+            require(
+                currentStatus == DonationStatus.AVAILABLE ||
+                        currentStatus == DonationStatus.PARTIALLY_CLAIMED
+            ) {
+                "This donation can no longer be cancelled."
+            }
+
+            transaction.update(
+                document,
+                mapOf(
+                    "status" to DonationStatus.CANCELLED,
+                    "updatedAt" to System.currentTimeMillis()
+                )
             )
-        ).await()
+        }.await()
     }
 }
+
+
